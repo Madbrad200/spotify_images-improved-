@@ -1,5 +1,6 @@
 ##############################################################################
-# Author: Orion Crocker
+# Original Author: Orion Crocker
+# Fork Author: Madbrad200
 # Filename: main.py
 # Date: 01/13/20
 # 
