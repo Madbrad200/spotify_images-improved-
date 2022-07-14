@@ -12,7 +12,15 @@ I've added some comments where I feel an explanation would help readability, and
 git clone https://github.com/orioncrocker/spotify_images
 ```
 
-If you're on windows, I'd recommend setting up a virtual environment.
+If you're on windows, I'd recommend setting up a virtual environment first:
+
+```bash
+python3 -m venv /path/to/new/virtual/environment```
+
+Entering your venv [depends on how you are accessing the terminal](https://docs.python.org/3/library/venv.html), in Powershell, simply type:
+```bash
+/path/to/new/virtual/environment/Scripts/Activate
+```
 
 ## Setup:
 Before using this program, you'll need to get credentials from [Spotify's API](https://developer.spotify.com/documentation/web-api/quick-start/).
@@ -26,13 +34,19 @@ client_secret = 'your_client_secret'
 
 **Never publish your ID publicly**
 
-Two prerequisites you'll need installed on your machine are pillow and spotipy.
+Two prerequisites you'll need installed on your machine are [pillow](https://pillow.readthedocs.io/en/stable/installation.html) and [spotipy](https://spotipy.readthedocs.io/en/master/).
 You can easily get both of these from the `pip` repository.
 If you aren't yet aware of the beauty of `pip`, go check out [it's website](https://pypi.org/project/pip/).
 You're welcome.
 
 ```bash
 pip3 install -r requirements.txt
+```
+
+Or install manually:
+```bash
+python3 -m pip install pillow
+python3 -m pip install spotipy
 ```
 
 # Usage:
