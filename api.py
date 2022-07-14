@@ -29,7 +29,8 @@ def get_artist(url):
 
 def get_playlist(url):
     spotify = get_access()
-    play_results = spotify.user_playlist_tracks(url)
+    username = None
+    play_results = spotify.user_playlist_tracks(username, url)
     tracks = play_results['items']
     while play_results['next']:
         play_results = spotify.next(play_results)
