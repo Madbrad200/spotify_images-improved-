@@ -1,5 +1,6 @@
 ################################################################################
-# Author: Orion Crocker
+# Original Author: Orion Crocker
+# Fork Author: Madbrad200
 # Filename: collage.py
 # Date: 02/06/20
 # 
