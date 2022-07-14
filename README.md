@@ -47,6 +47,6 @@ Use the `-v` or `--verbose` flag to see what the program is doing in real time.
 ## Create a collage
 Use the `-c` or `--collage` collage flag to create a collage of the artwork downloaded.
 
-The resulting collage:
+Example collage:
 
 ![Unleash The Archers Collage](examples/collage.jpeg)
