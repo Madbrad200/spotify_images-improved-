@@ -1,5 +1,11 @@
 # spotify\_images
-`spotify_images` provides a simple method of retrieving all unique album art from either a Spotify playlist or artist on Spotify and creating a collage from the query.
+`spotify_images` provides a simple method of retrieving all unique album art from either a Spotify playlist and creating a collage from the query.
+
+This fork will allow you to grab all images from a playlist, regardless of size (not possible in the original version), along with neater file names!
+
+I've added some comments where I feel an explanation would help readability, and complied with flake8 guidelines.
+
+Note: I have not tested this with artists pages. Works fine on playlists.
 
 ## Installation:
 ```bash
@@ -15,6 +21,8 @@ Modify the `config.py` file's two fields:
 client_id = 'your_client_id'
 client_secret = 'your_client_secret'
 ```
+
+**Never publish your ID publicly**
 
 Two prerequisites you'll need installed on your machine are pillow and spotipy.
 You can easily get both of these from the `pip` repository.
@@ -39,33 +47,6 @@ Use the `-v` or `--verbose` flag to see what the program is doing in real time.
 ## Create a collage
 Use the `-c` or `--collage` collage flag to create a collage of the artwork downloaded.
 
-```bash
-python3 main.py -vc https://open.spotify.com/playlist/13OSe3KLY2qnUrdP2Sv6j7
-Name: SRC#15
-Type: playlist
-results/src#15/blade_runner_(music_from_the_original_soundtrack).jpeg
-results/src#15/low_country.jpeg
-results/src#15/true_widow.jpeg
-results/src#15/these_changing_skies.jpeg
-results/src#15/odyssey.jpeg
-results/src#15/can't_buy_happiness.jpeg
-results/src#15/reptilians.jpeg
-results/src#15/dangerous_days.jpeg
-results/src#15/volume_1_(deluxe_edition).jpeg
-results/src#15/led_zeppelin_iv.jpeg
-results/src#15/lunz.jpeg
-results/src#15/tempel.jpeg
-12 saved to results/src#15
-Total unique pictures: 12
-Rows: 3	Cols: 4
-Collage saved as: results/src#15.jpeg
-```
 The resulting collage:
 
 ![Unleash The Archers Collage](examples/collage.jpeg)
-
-## Future features:
-I would love to be able to specify a width and height for the purposes of creating wallpapers.
-Additionally, a website that hosts this code via [Flask](https://flask.palletsprojects.com/en/1.1.x/) 
-would be ideal so that anyone could utilize this software without the hassle of installation and configuration.
-However if I'm going do that I may as well rewrite this program in Javascript and save myself some trouble.
