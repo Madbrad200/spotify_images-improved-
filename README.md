@@ -15,7 +15,8 @@ git clone https://github.com/orioncrocker/spotify_images
 If you're on windows, I'd recommend setting up a virtual environment first:
 
 ```bash
-python3 -m venv /path/to/new/virtual/environment```
+python3 -m venv /path/to/new/virtual/environment
+```
 
 Entering your venv [depends on how you are accessing the terminal](https://docs.python.org/3/library/venv.html), in Powershell, simply type:
 ```bash
