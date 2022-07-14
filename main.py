@@ -9,34 +9,37 @@
 ################################################################################
 
 import argparse
-import images, collage
+import images
+import collage
 
 
 def main():
 
-  parse = argparse.ArgumentParser(description='Spotify image gatherer and creator of collages')
-  parse.add_argument('url', nargs='?')
-  parse.add_argument('-c', '--collage', action='count', default=0, help='Create a collage out of images gathered from "playlist" or "artist" argument.')
-  parse.add_argument('-d', '--directory', dest='directory', type=str, help='Specify the a target directory to output results')
-  parse.add_argument('-v', '--verbose', action='count', default=0, help='See the program working instead of just believing that it is working')
-  parse.add_argument('-z', '--zip', action='count', default=0, help='Output the directory into a zip file')
+    parse = argparse.ArgumentParser(description='Spotify image gatherer and creator of collages')
+    parse.add_argument('url', nargs='?')
+    #parse.add_argument('username', nargs='?')  # enter spotify username
+    parse.add_argument('-c', '--collage', action='count', default=0, help='Create a collage out of images gathered from "playlist" or "artist" argument.')
+    parse.add_argument('-d', '--directory', dest='directory', type=str, help='Specify the a target directory to output results')
+    parse.add_argument('-v', '--verbose', action='count', default=0, help='See the program working instead of just believing that it is working')
+    parse.add_argument('-z', '--zip', action='count', default=0, help='Output the directory into a zip file')
 
-  args = parse.parse_args()
-  if args.url is None:
-    print('Spotify URL is required.')
-    exit(1)
+    args = parse.parse_args()
+    if args.url is None:
+        print('Spotify URL is required.')
+        exit(1)
+    # if args.username is None:
+    #     print("Spotify username is required")
 
-  c = args.collage
-  d = args.directory
-  v = args.verbose
-  z = args.zip
+    c = args.collage
+    d = args.directory
+    v = args.verbose
+    z = args.zip
   
-  directory = images.get_images(args.url, directory=args.directory, verbose=args.verbose, zip_this=args.zip)
+    directory = images.get_images(args.url, directory=args.directory, verbose=args.verbose, zip_this=args.zip)
 
-  if c:
-    collage.make_collage(directory=directory, verbose=args.verbose)
+    if c:
+        collage.make_collage(directory=directory, verbose=args.verbose)
 
 
 if __name__ == '__main__':
-  main()
-
+    main()
