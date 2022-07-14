@@ -1,16 +1,18 @@
 # spotify\_images
 `spotify_images` provides a simple method of retrieving all unique album art from either a Spotify playlist and creating a collage from the query.
 
-This fork will allow you to grab all images from a playlist, regardless of size (not possible in the original version), along with neater file names!
+This fork will allow you to grab all images from a playlist, regardless of size, along with neater file names!
+
+The original script would stop short once it hit the 100th track in a playlist. This *is no longer the case* - large playlists will have their single/album arts downloaded in their entirety.
 
 I've added some comments where I feel an explanation would help readability, and complied with flake8 guidelines.
-
-Note: I have not tested this with artists pages. Works fine on playlists.
 
 ## Installation:
 ```bash
 git clone https://github.com/orioncrocker/spotify_images
 ```
+
+If you're on windows, I'd recommend setting up a virtual environment.
 
 ## Setup:
 Before using this program, you'll need to get credentials from [Spotify's API](https://developer.spotify.com/documentation/web-api/quick-start/).
