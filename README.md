@@ -8,9 +8,6 @@ The original script would stop short once it hit the 100th track in a playlist. 
 I've added some comments where I feel an explanation would help readability, and complied with flake8 guidelines.
 
 ## Installation:
-```bash
-git clone https://github.com/orioncrocker/spotify_images
-```
 
 If you're on windows, I'd recommend setting up a virtual environment first:
 
@@ -22,6 +19,14 @@ Entering your venv [depends on how you are accessing the terminal](https://docs.
 ```bash
 /path/to/new/virtual/environment/Scripts/Activate
 ```
+
+Then, or if you skipped the venv process entirely, you can clone the github:
+
+```bash
+git clone https://github.com/Madbrad200/spotify_images-improved-
+```
+
+Done!
 
 ## Setup:
 Before using this program, you'll need to get credentials from [Spotify's API](https://developer.spotify.com/documentation/web-api/quick-start/).
